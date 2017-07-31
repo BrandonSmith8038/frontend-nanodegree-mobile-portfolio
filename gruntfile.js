@@ -74,8 +74,14 @@ module.exports = function(grunt) {
         }]
       },
     },
+    cssmin: {
+        my_target: {
+        src: 'css/style.css',
+        dest: 'css/style.min.css'
+        }
+    }
   });
-  
+  grunt.loadNpmTasks('grunt-css');
   grunt.loadNpmTasks('grunt-responsive-images');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-copy');
